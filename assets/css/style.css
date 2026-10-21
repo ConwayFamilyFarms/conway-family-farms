@@ -1,0 +1,179 @@
+/* Conway Family Farms — shared styles
+   Palette from the approved homepage (v3): cream + deep green + sage + tan. */
+:root{
+  --cream:#faf5e9;
+  --paper:#fffdf6;
+  --ink:#35322b;
+  --ink-soft:#5c574c;
+  --green:#2f4a33;
+  --green-deep:#223c27;
+  --sage:#7d9b76;
+  --sage-dark:#5d7d56;
+  --tan:#b08954;
+  --line:#e4dcc6;
+  --sign:#33523a;
+  --sign-dark:#2a4630;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(47,74,51,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:"Nunito Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px;line-height:1.6;
+}
+h1,h2,h3,.serif{font-family:"Fraunces",Georgia,"Times New Roman",serif;color:var(--green);line-height:1.2;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5.2vw,3.4rem)}
+h2{font-size:clamp(1.55rem,3.4vw,2.3rem)}
+h3{font-size:1.25rem}
+p{margin:0 0 1em}
+a{color:var(--sage-dark)}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--green);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ---------- family bar (cross-links) ---------- */
+.family-bar{background:var(--green-deep);color:#e9e4d2;font-size:.86rem}
+.family-bar .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-top:7px;padding-bottom:7px}
+.family-bar span{opacity:.75;letter-spacing:.02em}
+.family-bar a{color:#f2ecd9;text-decoration:none;font-weight:700;padding:2px 2px}
+.family-bar a:hover{text-decoration:underline}
+.family-bar a[aria-current]{color:#fff;border-bottom:2px solid var(--tan)}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;gap:18px;min-height:78px}
+.brand{display:flex;align-items:center;text-decoration:none;flex:none}
+.brand img{height:64px;width:auto}
+.main-nav{margin-left:auto}
+.main-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.main-nav a{
+  display:block;padding:12px 13px;text-decoration:none;color:var(--green);
+  font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.06rem;border-radius:8px;
+}
+.main-nav a:hover{background:#f0ead6}
+.main-nav a[aria-current]{box-shadow:inset 0 -3px 0 var(--tan)}
+.nav-toggle{display:none;margin-left:auto;background:var(--green);color:#fff;border:0;border-radius:9px;
+  padding:12px 16px;font-size:1rem;font-weight:700;cursor:pointer;min-height:48px}
+@media (max-width:820px){
+  .nav-toggle{display:block}
+  .main-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);
+    border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  .main-nav.open{display:block}
+  .main-nav ul{flex-direction:column;padding:10px 16px 16px}
+  .main-nav a{padding:13px 10px;border-bottom:1px solid var(--line)}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--green-deep)}
+.hero img{width:100%;height:min(560px,62vh);object-fit:cover;opacity:.92}
+.hero-text{position:absolute;inset:0;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(28,46,32,.72) 0%,rgba(28,46,32,.45) 46%,rgba(28,46,32,.05) 78%)}
+.hero-text .wrap{width:100%}
+.hero-text h1{color:#fdfaf0;text-shadow:0 2px 14px rgba(0,0,0,.35);margin-bottom:.25em}
+.hero-text .tagline{color:#f4efdc;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-bottom:.35em}
+.hero-text .sub{color:#e7e1cb;max-width:34em;margin-bottom:1.2em}
+.page-hero{background:var(--green);color:#f2ecd9;padding:52px 0 44px}
+.page-hero h1{color:#fdfaf0}
+.page-hero p{color:#e7e1cb;max-width:44em;margin:0}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:10px;
+  padding:14px 26px;min-height:52px;font-size:1.02rem;border:2px solid transparent;cursor:pointer}
+.btn-sage{background:var(--sage);color:#fff}
+.btn-sage:hover{background:var(--sage-dark)}
+.btn-cream{background:#f6efdb;color:var(--green-deep)}
+.btn-cream:hover{background:#fff}
+.btn-outline{border-color:var(--green);color:var(--green);background:transparent}
+.btn-outline:hover{background:#f0ead6}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* ---------- sections & cards ---------- */
+.section{padding:56px 0}
+.section.alt{background:var(--paper)}
+.section h2{text-align:left}
+.lede{font-size:1.13rem;color:var(--ink-soft);max-width:46em}
+.grid{display:grid;gap:22px}
+.grid-2{grid-template-columns:1fr}
+.grid-3{grid-template-columns:1fr}
+@media (min-width:760px){
+  .grid-2{grid-template-columns:1fr 1fr}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card img{height:210px;width:100%;object-fit:cover}
+.card .card-body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card .card-body p{color:var(--ink-soft)}
+.card .card-body .btn{margin-top:auto;align-self:flex-start}
+.price{font-family:"Fraunces",Georgia,serif;font-weight:700;color:var(--tan);font-size:1.15rem}
+.split{display:grid;gap:28px;align-items:center}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr}}
+.split img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;object-fit:cover}
+.photo-band{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.photo-band img{border-radius:var(--radius);height:100%;object-fit:cover}
+
+/* ---------- shop-the-farm banner ---------- */
+.shop-banner{background:linear-gradient(120deg,#f3ead2,#efe3c4);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shop-banner .split{align-items:center}
+.shop-banner .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.shop-banner .thumbs img{border-radius:10px;height:150px;width:100%;object-fit:cover;box-shadow:var(--shadow)}
+
+/* ---------- barn sign ---------- */
+.barn-sign{
+  border-radius:10px;color:#f4efdc;padding:clamp(26px,5vw,52px);
+  background:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 2px,transparent 2px 74px),
+    repeating-linear-gradient(0deg,var(--sign) 0 72px,var(--sign-dark) 72px 74px),
+    var(--sign);
+  box-shadow:inset 0 0 0 3px rgba(246,239,219,.25), var(--shadow);
+  text-align:center;
+}
+.barn-sign h2,.barn-sign h1{color:#fdfaf0}
+.barn-sign p{color:#e9e4cd;max-width:44em;margin-left:auto;margin-right:auto}
+.barn-sign .btn{margin-top:8px}
+
+/* ---------- steps, faq, tables ---------- */
+.steps{counter-reset:step;list-style:none;padding:0;margin:0;display:grid;gap:16px}
+@media (min-width:860px){.steps{grid-template-columns:repeat(5,1fr)}}
+.steps li{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.steps li::before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;
+  font-family:"Fraunces",Georgia,serif;font-weight:700;margin-bottom:10px}
+.steps h3{font-size:1.05rem;margin-bottom:.3em}
+.steps p{color:var(--ink-soft);font-size:.95rem;margin:0}
+details{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:800;color:var(--green);cursor:pointer;padding:4px 0}
+details p{color:var(--ink-soft);margin:.5em 0 .3em}
+.example{background:#f6efdb;border:1px dashed var(--tan);border-radius:var(--radius);padding:22px 24px}
+.example h3{color:var(--green)}
+table.spec{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table.spec th,table.spec td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+table.spec th{font-family:"Fraunces",Georgia,serif;color:var(--green);width:34%}
+.note{font-size:.92rem;color:var(--ink-soft)}
+.placeholder{color:#8a6d3b;background:#fbf3da;border-bottom:1px dashed var(--tan);padding:0 4px;border-radius:3px}
+
+/* ---------- forms ---------- */
+form.f{display:grid;gap:14px;max-width:640px}
+form.f label{font-weight:700;color:var(--green);display:grid;gap:6px}
+form.f input,form.f select,form.f textarea{
+  font:inherit;padding:12px 14px;border:1px solid #cfc7ab;border-radius:9px;background:#fff;color:var(--ink);min-height:48px}
+form.f textarea{min-height:130px}
+.form-note{display:none;background:#eef3e4;border:1px solid var(--sage);color:var(--green-deep);
+  border-radius:10px;padding:14px 18px;font-weight:600}
+.form-note.show{display:block}
+
+/* ---------- footer ---------- */
+.site-footer{background:var(--green-deep);color:#ddd8c4;margin-top:0}
+.site-footer .wrap{padding-top:44px;padding-bottom:30px}
+.foot-grid{display:grid;gap:28px}
+@media (min-width:820px){.foot-grid{grid-template-columns:1.3fr 1fr 1fr}}
+.site-footer img.logo{height:74px;width:auto;margin-bottom:12px}
+.site-footer h3{color:#f2ecd9;font-size:1.05rem;margin-bottom:.5em}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.site-footer a{color:#e9e4d2;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.foot-small{border-top:1px solid rgba(242,236,217,.18);margin-top:30px;padding-top:16px;font-size:.86rem;color:#bdb79f}
+:focus-visible{outline:3px solid var(--tan);outline-offset:2px}
