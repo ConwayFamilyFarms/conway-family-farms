@@ -80,7 +80,7 @@ FOOTER = """
         <ul>
           <li><a href="shop.html">Shop the Farm</a></li>
           <li><a href="hog-shares.html">Whole &amp; Half Hog Shares</a></li>
-          <li><a href="farm-stand.html">Farm Stand &amp; Hours</a></li>
+          <li><a href="farm-stand.html">Farm Stand &amp; Visit</a></li>
           <li><a href="for-buyers.html">For Buyers (Wholesale)</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -173,7 +173,7 @@ PAGES["index.html"] = dict(
       <img src="assets/img/stand.jpg" alt="A farm stand table piled with fresh vegetables" loading="lazy">
       <div class="card-body">
         <h3>Visit the Farm Stand — South of Molalla, Oregon</h3>
-        <p>Seasonal produce, eggs, and honey at the stand. Stop by for farm-fresh goods and say hello to the flock.</p>
+        <p>Our roadside stand is open around the clock, stocked as the harvest comes in — seasonal produce, eggs, and honey, freshest first. Stop by any time and say hello to the flock.</p>
         <a class="btn btn-sage" href="farm-stand.html">Plan Your Visit</a>
       </div>
     </article>
@@ -263,7 +263,7 @@ PAGES["shop.html"] = dict(
         </div>
       </article>
     </div>
-    <p class="note" style="margin-top:16px">Eggs and honey are picked up at the farm stand — see the <a href="farm-stand.html">Visit page</a> for hours. Seasonal garden goods show up at the stand through the year, first come, first served.</p>
+    <p class="note" style="margin-top:16px">Eggs and honey are picked up at the farm stand — it&rsquo;s roadside and open around the clock; see the <a href="farm-stand.html">Visit page</a>. Seasonal garden goods show up at the stand through the year, first come, first served.</p>
   </div>
 </section>
 
@@ -448,13 +448,14 @@ PAGES["farm-stand.html"] = dict(
   <div class="wrap split">
     <img src="assets/img/stand.jpg" alt="A farm stand table piled with fresh vegetables" loading="lazy">
     <div>
-      <h2>Hours &amp; finding us</h2>
+      <h2>Finding us</h2>
       <table class="spec">
-        <tr><th>Stand hours</th><td>Open Saturdays, 9am–2pm</td></tr>
+        <tr><th>Hours</th><td>Open 24 hours a day, every day — roadside and self-serve</td></tr>
         <tr><th>Where</th><td>South of Molalla, Oregon <span class="placeholder">[street address &amp; directions to be added]</span></td></tr>
         <tr><th>What&rsquo;s here</th><td>Farm eggs, raw honey, and whatever the garden is producing this week</td></tr>
         <tr><th>Payment</th><td>Cash and card welcome</td></tr>
       </table>
+      <p style="margin-top:14px">The stand sits at the roadside and never closes — swing by any time and help yourself. We stock it as the harvest comes in, so what&rsquo;s on the table is the freshest thing on the farm right now.</p>
       <p class="note" style="margin-top:14px">Egg customers: the stand is the pickup point for dozens ordered ahead through the <a href="contact.html">contact page</a>.</p>
     </div>
   </div>
@@ -575,7 +576,7 @@ PAGES["contact.html"] = dict(
       <table class="spec">
         <tr><th>Phone</th><td><span class="placeholder">[phone to be added]</span></td></tr>
         <tr><th>Email</th><td><span class="placeholder">[email to be added]</span></td></tr>
-        <tr><th>Farm stand</th><td>South of Molalla, Oregon — Saturdays 9am–2pm (<a href="farm-stand.html">visit page</a>)</td></tr>
+        <tr><th>Farm stand</th><td>South of Molalla, Oregon — roadside stand, open 24 hours a day (<a href="farm-stand.html">visit page</a>)</td></tr>
         <tr><th>Social</th><td><a href="__FB__">Facebook</a> &middot; <a href="__IG__">Instagram</a> — @conwayfamilyfarms</td></tr>
       </table>
       <h3 style="margin-top:1.4em">Join the farm list</h3>
