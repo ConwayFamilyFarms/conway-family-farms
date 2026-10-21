@@ -70,7 +70,8 @@ img{max-width:100%;display:block}
 .hero{position:relative;background:var(--green-deep)}
 .hero img{width:100%;height:min(560px,62vh);object-fit:cover;opacity:.92}
 .hero-text{position:absolute;inset:0;display:flex;align-items:center;
-  background:linear-gradient(90deg,rgba(28,46,32,.72) 0%,rgba(28,46,32,.45) 46%,rgba(28,46,32,.05) 78%)}
+  background:linear-gradient(90deg,rgba(24,40,28,.85) 0%,rgba(24,40,28,.62) 52%,rgba(24,40,28,.18) 82%),
+             linear-gradient(0deg,rgba(24,40,28,.45) 0%,transparent 55%)}
 .hero-text .wrap{width:100%}
 .hero-text h1{color:#fdfaf0;text-shadow:0 2px 14px rgba(0,0,0,.35);margin-bottom:.25em}
 .hero-text .tagline{color:#f4efdc;font-family:"Fraunces",Georgia,serif;font-size:clamp(1.15rem,2.6vw,1.6rem);margin-bottom:.35em}
